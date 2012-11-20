@@ -1,0 +1,9 @@
+author: iAliHD
+description: Me derping around with my awesome skeels.
+main: me.ialihd.weirdploogin2.WeirdPloogin
+name: WeirdPloogin
+version: 0.1
+commands:
+  enchant:
+    description: Portable Enchanting command.
+    aliases: [enc, e, enchanting, enchantment]
