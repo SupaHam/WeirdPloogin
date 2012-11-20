@@ -4,6 +4,6 @@ main: me.ialihd.weirdploogin2.WeirdPloogin
 name: WeirdPloogin
 version: 0.1
 commands:
-  enchant:
-    description: Portable Enchanting command.
-    aliases: [enc, e, enchanting, enchantment]
+  command:
+    description: Command's description.
+    aliases: [aliases, for, the, command ]
