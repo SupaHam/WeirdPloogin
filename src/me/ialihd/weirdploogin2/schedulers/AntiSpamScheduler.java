@@ -7,6 +7,7 @@ public class AntiSpamScheduler implements Runnable{
 
 	@Override
 	public void run() {
+		// Clear the HashMap spamMessages
 		WeirdPloogin.spamMessages.clear();
 	}
 	

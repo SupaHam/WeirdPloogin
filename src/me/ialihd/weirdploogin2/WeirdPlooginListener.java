@@ -24,31 +24,29 @@ public class WeirdPlooginListener implements Listener {
 		plugin = instance;
 	}
 
-	public void playerEnchant(EnchantItemEvent e) {
+//
+//	@EventHandler
+//	public void onPlayerPreLogin(AsyncPlayerPreLoginEvent e) {
+//		String playerName = e.getName();
+//		Result result = AsyncPlayerPreLoginEvent.Result.KICK_FULL;
+//		String message = playerName + " " + config.config.getString("message.ban");
+//		e.disallow(result, message);
+//		e.setLoginResult(result);
+//	}
 
-	}
-
-	@EventHandler
-	public void onPlayerPreLogin(AsyncPlayerPreLoginEvent e) {
-		String playerName = e.getName();
-		Result result = AsyncPlayerPreLoginEvent.Result.KICK_FULL;
-		String message = playerName + " " + config.config.getString("message.ban");
-		e.disallow(result, message);
-		e.setLoginResult(result);
-	}
-
+	// Fired when a player right clicks or left clicks
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent e) {
+		// Get the player involved in this event
 		Player player = e.getPlayer();
-		if (player.getItemInHand().getType() == Material.WEB) {
+		// Checking If the player is holding an item in his still
+		if (player.getItemInHand().getType() == Material.STICK) {
+			//Defining block as to whatever the block the player is targeting within the range of 30 and don't ignore any blocks
 			Block block = player.getTargetBlock(null, 30);
-			Location loc = block.getLocation().add(0, 1, 0);
-			loc.getBlock().setType(Material.WEB);
-			if (player.getGameMode() != GameMode.CREATIVE) {
-				ItemStack web = player.getItemInHand();
-				ItemStack newWeb = new ItemStack(Material.WEB, web.getAmount() - 1);
-				player.setItemInHand(newWeb);
-			}
+			//Get the variable block 's location
+			Location loc = block.getLocation();
+			//Create an explosion at the block in the world where the player was aiming
+			loc.getBlock().getWorld().createExplosion(loc, 4F);
 		}
 	}
 }

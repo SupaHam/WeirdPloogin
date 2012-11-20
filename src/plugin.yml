@@ -2,7 +2,7 @@ author: iAliHD
 description: Me derping around with my awesome skeels.
 main: me.ialihd.weirdploogin2.WeirdPloogin
 name: WeirdPloogin
-version: 0.1
+version: 0.2
 commands:
   command:
     description: Command's description.

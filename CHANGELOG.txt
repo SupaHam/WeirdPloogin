@@ -1,0 +1,11 @@
+0.2:
+  - Added some comments
+  - 
+0.1:
+  - Added Custom Config
+  - Added Custom Commands
+    - !d to change time to day
+    - !r to toggle rain
+    - !f to freeze the sender
+  - Added antispam chat
+  - Click with a stick on a block within a range of 30 blocks to create an explosion
